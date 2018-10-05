@@ -1,37 +1,18 @@
 public class Decrypt {
 
-    public static String decrypt(String plainText, int shift) {
-        if (shift > 26) {
-            shift = shift % 26;
-        } else if (shift < 0) {
-            shift = (shift % 26) + 26;
-        }
+    public static final String ALPHABET = "abcdefghijklmnopqrstuvwxyz";
 
-        String Ciphertext = "";
-        int length = plainText.length();
-        for (int i = 0;i<length;i++){
-            char ch = plainText.charAt(i);
-            if (Character.isLetter(ch)){
-                if (Character.isLowerCase(ch)){
-                    char c = (char)(ch - shift);
-                    if (c<'a'){
-                        Ciphertext += (char)(ch + (26-shift));
-                    }else{
-                        Ciphertext += c;
-                    }
-                }else if(Character.isUpperCase(ch)){
-                    char c = (char)(ch + shift);
-                    if (c <'A'){
-                        Ciphertext += (char)(ch + (26-shift));
-                    }else{
-                        Ciphertext += c;
-                    }
-                }
-            }else{
-                Ciphertext += ch;
-            }
 
+    public static String decrypt(String plainText, int shiftKey){
+        plainText = plainText.toLowerCase();
+        String cipherText ="";
+        for (int i = 0; i < plainText.length(); i++){
+
+            int charPosition = ALPHABET.indexOf(plainText.charAt(i));
+            int keyVal = (charPosition - shiftKey) % 26;
+            char replaceVal = ALPHABET.charAt(keyVal);
+            cipherText += replaceVal;
         }
-        return Ciphertext;
+        return cipherText;
     }
 }
