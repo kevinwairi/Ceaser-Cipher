@@ -12,9 +12,5 @@ You can follow this link https://kevinwairi.github.io/Ceaser-Cipher/ to a live d
 or clone the program in to yoyr machine and then run it on your Editor
 git clone https://kevinwairi.github.io/Ceaser-Cipher/
 
-
-
-
-
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Licensed by MIT
+https://github.com/kevinwairi/Ceaser-Cipher/blob/master/LICENSE
