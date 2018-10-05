@@ -6,5 +6,14 @@ public class Encrypt {
         } else if (shift < 0) {
             shift = (shift % 26) + 26;
         }
+
+        String Ciphertext = "";
+        int length = plainText.length();
+        for (int i = 0;i<length;i++){
+            char ch = plainText.charAt(i);
+        }
+
+
+        return Ciphertext;
     }
 }
