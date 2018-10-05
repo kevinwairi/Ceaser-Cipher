@@ -8,12 +8,13 @@ public class CaeserCipher_test {
     private Decrypt testDecrypt = new Decrypt();
 
     @Test
-    public void encryptdata(){
-        assertEquals( "id", testEncrypt.encrypt("gb",2));
+    public void isEncrypt_encryptdata_true() {
+        assertEquals("cd", testEncrypt.encrypt("ab", 2));
     }
 
+
     @Test
-    public void decryptdata(){
-        assertEquals( "gb", testDecrypt.decrypt("id",2));
+    public void isDecrypt_decryptdata_true(){
+        assertEquals( "ab", testDecrypt.decrypt("cd",2));
     }
 }
