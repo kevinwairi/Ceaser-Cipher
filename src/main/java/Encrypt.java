@@ -1,19 +1,18 @@
 public class Encrypt {
 
-    public static String encrypt(String plainText, int shift) {
-        if (shift > 26) {
-            shift = shift % 26;
-        } else if (shift < 0) {
-            shift = (shift % 26) + 26;
-        }
-
-        String Ciphertext = "";
-        int length = plainText.length();
-        for (int i = 0;i<length;i++){
-            char ch = plainText.charAt(i);
-        }
+    public static final String ALPHABET = "abcdefghijklmnopqrstuvwxyz";
 
 
-        return Ciphertext;
+        public static String encrypt(String plainText, int shiftKey){
+            plainText = plainText.toLowerCase();
+            String cipherText ="";
+            for (int i = 0; i < plainText.length(); i++){
+
+                int charPosition = ALPHABET.indexOf(plainText.charAt(i));
+                int keyVal = (shiftKey + charPosition) % 26;
+                char replaceVal = ALPHABET.charAt(keyVal);
+                cipherText += replaceVal;
+            }
+        return cipherText;
     }
 }
