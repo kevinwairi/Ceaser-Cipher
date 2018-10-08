@@ -9,7 +9,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Installation
 You can follow this link https://kevinwairi.github.io/Ceaser-Cipher/ to a live deployed site
-or clone the program in to yoyr machine and then run it on your Editor
+or clone the program in to your machine and then run it on your IDE or Terminal
 git clone https://kevinwairi.github.io/Ceaser-Cipher/
 
 ## Licensed by MIT
